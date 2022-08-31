@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="data">
+    <div class="inputs">
+      <div class="dadosBase">
+        <label class="titleSection">Dados Base</label>
+
+        <label>Valor Hora</label>
+        <input [(ngModel)]="valorHora" />
+
+        <label>Quantidae de Horas</label>
+        <input [(ngModel)]="quantidaDeHoras" />
+
+        <label>Valor De Impostos</label>
+        <input [(ngModel)]="valorImpostos" />
+      </div>
+      <div class="dadosVariaveis">
+        <label class="titleSection">Dados Variaveis</label>
+
+        <label>Aluguel</label>
+        <input [(ngModel)]="aluguel" />
+
+        <label>Agua</label>
+        <input [(ngModel)]="agua" />
+
+        <label>Luz</label>
+        <input [(ngModel)]="luz" />
+
+        <label>Internet</label>
+        <input [(ngModel)]="internet" />
+      </div>
+      <div class="buttonResultado">
+        <button (click)="calculoValorLiquido()">Calcular</button>
+        <p>R{{ totalLiquido | currency }}</p>
+      </div>
+    </div>
+  </div>
+</div>
