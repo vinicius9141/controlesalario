@@ -31,10 +31,6 @@ export class HomeComponent {
       Number(this.agua) +
       Number(this.luz) +
       Number(this.internet);
-    localStorage.setItem('aluguel', this.aluguel.toString());
-    localStorage.setItem('agua', this.agua.toString());
-    localStorage.setItem('luz', this.luz.toString());
-    localStorage.setItem('internet', this.internet.toString());
   }
 
   public calculoValorLiquido(): any {
