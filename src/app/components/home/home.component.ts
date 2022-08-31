@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularCsv } from 'angular-csv-ext/dist/Angular-csv';
 
 @Component({
   selector: 'app-home',
@@ -37,5 +38,35 @@ export class HomeComponent {
     this.calculoValorSalario();
     this.calculoValorContas();
     this.totalLiquido = this.resultado - this.valorFinalContas;
+  }
+
+  public exportarValores(): void {
+    let options = {
+      headers: [
+        'Valor hora',
+        'Quantidade De Horas',
+        'Valor de Impostos',
+        'Aluguel',
+        'Agua',
+        'Luz',
+        'Internet',
+        'Total Liquido',
+      ],
+      showLabels: true,
+      fieldSeparator: ';',
+    };
+    let data = [
+      {
+        valorHora: this.valorHora,
+        quantidadeHoras: this.quantidaDeHoras,
+        valorImpostos: this.valorImpostos,
+        aluguel: this.aluguel,
+        agua: this.agua,
+        luz: this.luz,
+        internet: this.internet,
+        valorTotal: this.totalLiquido,
+      },
+    ];
+    new AngularCsv(data, 'relatorio_finanças', options);
   }
 }

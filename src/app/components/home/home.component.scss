@@ -58,8 +58,16 @@
           outline: none;
         }
       }
-      .buttonResultado {
-        button {
+      .areaResultado {
+        .exportButton {
+          background-color: #5cc048;
+          border: none;
+          border-radius: 8px;
+          font-size: 12px;
+          padding: 4px;
+          margin-top: 12px;
+        }
+        .buttonResultado {
           background-color: coral;
           border: none;
           border-radius: 8px;
@@ -70,7 +78,7 @@
           transition: all 0.2s;
           cursor: pointer;
         }
-        button:hover {
+        .buttonResultado:hover {
           transition: all 0.2s;
           height: 40px;
         }

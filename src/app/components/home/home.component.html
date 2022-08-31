@@ -28,8 +28,13 @@
         <label>Internet</label>
         <input [(ngModel)]="internet" />
       </div>
-      <div class="buttonResultado">
-        <button (click)="calculoValorLiquido()">Calcular</button>
+      <div class="areaResultado">
+        <button class="buttonResultado" (click)="calculoValorLiquido()">
+          Calcular
+        </button>
+        <button class="exportButton" (click)="exportarValores()">
+          Exportar CSV
+        </button>
         <p>R{{ totalLiquido | currency }}</p>
       </div>
     </div>
